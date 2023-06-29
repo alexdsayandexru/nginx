@@ -1,3 +1,5 @@
+sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain /Users/aleksandrsudakov/GolandProjects/nginx/https_proxy/localhost.crt
+
 1. Собрать образ
 docker image build -t proxy_nginx .
 
@@ -20,4 +22,6 @@ service nginx reload
 
 https://ssl-config.mozilla.org/
 
+--Какие порты заняты
+sudo lsof -iTCP -sTCP:LISTEN -n -P
 ==============
